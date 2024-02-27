@@ -1,0 +1,15 @@
+SELECT
+  col1 as SEGMENT_ID,
+  col2 as ENCODING_CHARACTERS,
+  col3 as SENDING_APPLICATION,
+  col4 as SENDING_FACILITY,
+  col5 as RECEIVING_APPLICATION,
+  col6 as RECEIVING_FACILITY,
+  col7 as DATE_TIME_OF_MESSAGE,
+  col8 as SECURITY_TYPE,
+  col9 as MESSAGE_TYPE,
+  col10 as MESSAGE_CONTROL_ID,
+  col11 as PROCESSING_ID,
+  col12 as VERSION_ID
+FROM {{ ref('hl7_parsed') }} as hl7_parsed
+WHERE col1 = 'MSH'

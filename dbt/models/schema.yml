@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: unparsed_hl7
+    schema: public
+    tables:
+      - name: sample_hl7
+        description: "Raw HL7 file loaded line by line"
+        columns:
+          - name: col0
+            description: "Raw ASCII"
+
